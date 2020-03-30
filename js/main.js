@@ -34,9 +34,10 @@ console.log(playerRoll);
 var cpuRoll = Math.floor((Math.random() * 6) + 1);
 console.log(cpuRoll);
 
-if ( playerRoll <= cpuRoll) {
+// Scores matching
+if ( playerRoll < cpuRoll) {
     console.log('Hai perso');
-} else if ( playerRoll >= cpuRoll ) {
+} else if ( playerRoll > cpuRoll ) {
     console.log('Hai vinto');
 } else {
     console.log('Parità');
