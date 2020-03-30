@@ -1,10 +1,10 @@
 /*
  * Ex-1
 */
-/*
+
 // References
 var userIds = ['michele@boolean.careers', 'fabio@boolean.careers', 'roberto@boolean.careers'];
-var inputEmail = prompt('Inserisci il tuo indirizzo email');
+// var inputEmail = prompt('Inserisci il tuo indirizzo email');
 var userFound = false;
 
 // User matching
@@ -17,14 +17,16 @@ for (var i = 0; i < userIds.length; i++) {
 
 // Feedback
 if (userFound == true) {
-    console.log('Ok');
+    // alert('Accesso effettuato');
 } else {
-    console.log('Fail');
+    // alert('Errore di autenticazione: utente non trovato');
 }
-*/
+
 /*
  * Ex-2
 */
+
+
 
 // Player roll
 var playerRoll = Math.floor((Math.random() * 6) + 1);
