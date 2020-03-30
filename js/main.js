@@ -31,6 +31,8 @@ var rollBtn = document.getElementById('rollBtn');
 var youWin = 'You win!';
 var youLose = 'You lose';
 var even = 'We are even, let\'s try again';
+var playerScore = 0;
+var cpuScore = 0;
 
 
 rollBtn.addEventListener ( 'click', 
@@ -43,16 +45,26 @@ rollBtn.addEventListener ( 'click',
         var cpuRoll = Math.floor((Math.random() * 6) + 1);
         console.log(cpuRoll);
 
+        // Scores
+        document.getElementById('playerRoll').innerHTML = playerRoll;
+        document.getElementById('cpuRoll').innerHTML = cpuRoll;
+
         // Scores matching
         if ( playerRoll < cpuRoll) {
             console.log('Hai perso');
             document.getElementById('result').innerHTML = youLose;
+            ++cpuScore;
         } else if ( playerRoll > cpuRoll ) {
             console.log('Hai vinto');
             document.getElementById('result').innerHTML = youWin;
+            ++playerScore;
         } else {
             console.log('Parità');
             document.getElementById('result').innerHTML = even;
-        } 
+        }
+        
+        document.getElementById('playerScore').innerHTML = playerScore;
+        document.getElementById('cpuScore').innerHTML = cpuScore;
     }
 );
+
