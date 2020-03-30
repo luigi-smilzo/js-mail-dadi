@@ -28,6 +28,9 @@ if (userFound == true) {
 
 // References
 var rollBtn = document.getElementById('rollBtn');
+var youWin = 'You win!';
+var youLose = 'You lose';
+var even = 'We are even, let\'s try again';
 
 
 rollBtn.addEventListener ( 'click', 
@@ -35,7 +38,7 @@ rollBtn.addEventListener ( 'click',
         // Player roll
         var playerRoll = Math.floor((Math.random() * 6) + 1);
         console.log(playerRoll);
-
+            
         // CPU roll
         var cpuRoll = Math.floor((Math.random() * 6) + 1);
         console.log(cpuRoll);
@@ -43,10 +46,13 @@ rollBtn.addEventListener ( 'click',
         // Scores matching
         if ( playerRoll < cpuRoll) {
             console.log('Hai perso');
+            document.getElementById('result').innerHTML = youLose;
         } else if ( playerRoll > cpuRoll ) {
             console.log('Hai vinto');
+            document.getElementById('result').innerHTML = youWin;
         } else {
             console.log('Parità');
+            document.getElementById('result').innerHTML = even;
         } 
     }
 );
